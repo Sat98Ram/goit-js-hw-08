@@ -9,10 +9,19 @@ const refs = {
 refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onTextareaInput));
 
+//  виводь у консоль об'єкт з полями email, message та їхніми поточними значеннями
+
 populateForm();
 
 function onFormSubmit(event) {
   event.preventDefault();
+
+  const formData = {
+    email: refs.input.value,
+    message: refs.textarea.value,
+  };
+
+  console.log(formData);
 
   event.target.reset();
 
