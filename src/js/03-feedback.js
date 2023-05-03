@@ -14,7 +14,6 @@ populateForm();
 function onFormSubmit(event) {
   event.preventDefault();
 
-  console.log('send form');
   event.target.reset();
 
   localStorage.removeItem('feedback-form-state');
