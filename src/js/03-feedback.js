@@ -9,8 +9,6 @@ const refs = {
 refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onTextareaInput));
 
-//  виводь у консоль об'єкт з полями email, message та їхніми поточними значеннями
-
 populateForm();
 
 function onFormSubmit(event) {
@@ -42,7 +40,6 @@ function populateForm() {
 
   if (savedForm) {
     const parsedData = JSON.parse(savedForm);
-    console.log(parsedData);
     refs.textarea.value = parsedData.message;
     refs.input.value = parsedData.email;
   }
